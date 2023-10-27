@@ -32,6 +32,6 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages
-          build_dir: HanabiTracker/dist/
+          build_dir: HanabiTracker/dist/hanabi-tracker
         env:
           GITHUB_TOKEN: ${{ github.token }}
