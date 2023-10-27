@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 14
 
-      - name: Navigate to Angular project directory
+      - name: Set working directory
         run: cd HanabiTracker
 
       - name: Install dependencies
@@ -32,4 +32,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: dist/HanabiTracker
+          FOLDER: HanabiTracker/dist/HanabiTracker
