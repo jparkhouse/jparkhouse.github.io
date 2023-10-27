@@ -26,7 +26,7 @@ jobs:
         run: npm install
 
       - name: Build the app
-        run: npm run build --deploy-url /HanabiTracker/
+        run: npm run build --base-href /HanabiTracker/
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3
