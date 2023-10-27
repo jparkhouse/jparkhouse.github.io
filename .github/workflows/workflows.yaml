@@ -3,7 +3,7 @@ name: Build and Deploy Angular App
 on:
   push:
     branches:
-      - gh-pages
+      - main
 
 defaults:
   run:
@@ -31,7 +31,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3
         with:
-          target_branch: main
+          target_branch: gh-pages
           build_dir: HanabiTracker/dist/
         env:
           GITHUB_TOKEN: ${{ github.token }}
