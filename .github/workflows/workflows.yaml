@@ -9,11 +9,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Set working directory
-        run: cd HanabiTracker
-
       - name: Checkout code
         uses: actions/checkout@v3
+      
+      - name: Set working directory
+        run: cd HanabiTracker
 
       - name: Set up Node.js
         uses: actions/setup-node@v3.3.0
