@@ -8,8 +8,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+      steps:
+      - name: Set working directory
+        run: cd HanabiTracker
 
-    steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -18,9 +20,6 @@ jobs:
         with:
           node-version: '16'
           cache: 'npm'
-
-      - name: Set working directory
-        run: cd HanabiTracker
 
       - name: Install dependencies
         run: npm install
