@@ -3,7 +3,7 @@ name: Build and Deploy Angular App
 on:
   push:
     branches:
-      - main # Adjust the branch name if needed
+      - main
 
 jobs:
   build:
@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: 14
 
+      - name: Navigate to Angular project directory
+        run: cd HanabiTracker
+
       - name: Install dependencies
         run: npm install
 
@@ -29,4 +32,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: dist/HanabiTracker # Replace with your app's build output folder
+          FOLDER: dist/HanabiTracker
